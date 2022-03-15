@@ -12,7 +12,7 @@ export class UserRepositoryAdapter implements IUserRepository {
     this.userRepo = em.getRepository(UserSchema);
   }
 
-  create(name: string, email: string, password: string): Promise<User> {
-    return this.userRepo.save({ name: name, email: email, password: password });
+  create(name: string): Promise<User> {
+    return this.userRepo.save({ name: name });
   }
 }

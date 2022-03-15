@@ -12,10 +12,6 @@ export class UsersController {
   create(@Body() createUserDto: CreateUserDto) {
     console.log(createUserDto);
     console.log(this.usersService);
-    return this.usersService.create(
-      createUserDto.name,
-      createUserDto.email,
-      createUserDto.password,
-    );
+    return this.usersService.create(createUserDto.name);
   }
 }
